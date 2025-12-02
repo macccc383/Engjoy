@@ -1,0 +1,533 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejoy English | Word of the Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb;
+      --border: #e2e8f0;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: transparent;
+      border-bottom: none;
+      padding: 8px 0;
+    }
+
+    header .container {
+      padding: 0 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      gap: 12px;
+    }
+
+    .nav-islands {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+    }
+
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    .island {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+      font-weight: 700;
+      color: var(--text);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    }
+
+    .island:hover {
+      transform: translateY(-2px);
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+    }
+
+    .logo-mark {
+      width: 200px;
+      height: 120px;
+      border-radius: 16px;
+      display: block;
+      object-fit: cover;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .logo-island {
+      padding: 8px;
+      border: none;
+      background: #ffffff;
+      box-shadow: none;
+    }
+
+    .island-accent {
+      background: var(--accent);
+      color: #ffffff;
+      border: 1px solid var(--accent);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 640px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px 32px;
+      box-shadow: var(--shadow);
+      margin: 120px auto 80px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 12px;
+      position: relative;
+    }
+
+    .word-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      letter-spacing: 0.35px;
+      font-size: 32px;
+      line-height: 1.2;
+      color: #ffffff;
+      background: var(--accent);
+      padding: 10px 16px;
+      border-radius: 12px;
+    }
+
+    .box-illustration {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      position: absolute;
+      top: -190px;
+      right: -20px;
+      pointer-events: none;
+    }
+
+    .word {
+      font-size: 40px;
+      font-weight: 700;
+      font-family: "Playfair Display", Georgia, serif;
+      margin: 6px 0 10px;
+      letter-spacing: -0.4px;
+    }
+
+    .phonetic {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    h2 {
+      margin: 12px 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--muted);
+      display: grid;
+      gap: 10px;
+    }
+
+    li {
+      line-height: 1.6;
+    }
+
+    .btn {
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--muted);
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+      border-color: #cbd5e1;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-ghost {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .btn-login {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 16px;
+      min-width: 104px;
+      color: #ffffff;
+    }
+
+    .mobile-blocker {
+      display: none;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: #ffffff;
+      color: #0f172a;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mobile-blocker img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+
+    @media (max-width: 800px) {
+      .desktop-only {
+        display: none !important;
+      }
+      .mobile-blocker {
+        display: flex;
+      }
+    }
+
+    .score-row {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      margin: -30px auto 200px;
+      padding: 0;
+      transform: translateX(-295px);
+    }
+
+    .score-circle {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 140px;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .score-image {
+      width: 260px;
+      height: auto;
+      object-fit: contain;
+      transform: translate(-20px, -170px);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 460px;
+      transform: translateX(480px);
+    }
+
+    .skill-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 28px;
+      box-shadow: var(--shadow);
+      font-weight: 800;
+      color: var(--text);
+      text-align: center;
+      font-size: 20px;
+    }
+
+    @keyframes arrow-bob {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .floating-arrow {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 96px;
+      height: 96px;
+      z-index: 30;
+      pointer-events: auto;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .floating-arrow .ring {
+      position: absolute;
+      inset: 0;
+      width: 96px;
+      height: 96px;
+      border-radius: 999px;
+      border: 2px solid rgba(37, 99, 235, 0.3);
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+      animation: arrow-bob 1.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .floating-arrow img {
+      width: 72px;
+      height: auto;
+      animation: arrow-bob 1.8s ease-in-out infinite;
+      display: block;
+      margin: 12px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-blocker">
+    <div>
+      <div style="font-size:28px; font-weight:900; margin-bottom:8px;">WE'RE SORRY</div>
+      <div style="font-size:24px; font-weight:800; margin-bottom:12px;">Please access the website through desktop</div>
+      <img src="DOPIEsad.png" alt="DOPIE sad">
+    </div>
+  </div>
+  <div class="desktop-only">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-islands">
+            <a class="island logo-island" href="index.html">
+              <img class="logo-mark" src="logo.png" alt="Ejoy English logo">
+            </a>
+          </div>
+          <div class="nav-actions">
+            <a class="island" href="index.html#programs">Programs</a>
+            <a class="island" href="index.html#focus">Modules</a>
+            <a class="island" href="index.html#wins">Results</a>
+            <a class="island" href="index.html#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main style="padding-top: 48px;">
+      <div class="container">
+        <div class="card" id="word-card">
+          <div class="top-row">
+            <div class="word-label">Word of the day</div>
+            <div class="actions">
+              <button class="btn" id="refresh">New word</button>
+              <a class="btn" href="index.html">Back to home</a>
+            </div>
+            <img class="box-illustration" src="DOPIEidle2.png" alt="DOPIE character">
+          </div>
+          <div class="word" id="word-text">Word</div>
+          <div class="phonetic" id="phonetic-text">/ phonetic /</div>
+          <h2 id="pos-text">noun</h2>
+          <ol id="definitions"></ol>
+        </div>
+      </div>
+    <div class="container" style="text-align:center; margin-top: 490px; margin-bottom: 120px;">
+      <img src="DOPIEsomething.png" alt="DOPIE thinking" style="max-width: 240px; width: 60%; height: auto; display: block; margin: 0 auto 12px;">
+      <div style="font-weight:999; color: var(--text); font-size: 70px;">What should we do today?</div>
+    </div>
+    <div class="container score-row">
+      <div class="score-circle">6.5</div>
+      <img class="score-image" src="score.png" alt="Score graphic">
+      <div class="skills-grid">
+        <div class="skill-card">Listening</div>
+        <div class="skill-card">Reading</div>
+        <div class="skill-card">Writing</div>
+          <div class="skill-card">Speaking</div>
+        </div>
+      </div>
+    </main>
+    <div class="floating-arrow">
+      <div class="ring"></div>
+      <img src="arrow.png" alt="Animated arrow">
+    </div>
+  </div>
+
+  <script>
+    const entries = [
+      {
+        word: "serendipity",
+        phonetic: "/ seh-ren-DIP-uh-tee /",
+        pos: "noun",
+        defs: [
+          "the occurrence of events by chance in a happy or beneficial way",
+          "a knack for making fortunate discoveries"
+        ]
+      },
+      {
+        word: "catalyst",
+        phonetic: "/ KAT-uh-list /",
+        pos: "noun",
+        defs: [
+          "something that causes or accelerates a change or reaction",
+          "a person or thing that precipitates an event"
+        ]
+      },
+      {
+        word: "nuance",
+        phonetic: "/ NOO-ahnce /",
+        pos: "noun",
+        defs: [
+          "a subtle difference in meaning, expression, or sound",
+          "a slight variation that adds depth or complexity"
+        ]
+      },
+      {
+        word: "resilient",
+        phonetic: "/ rih-ZIL-yunt /",
+        pos: "adjective",
+        defs: [
+          "able to withstand or recover quickly from difficult conditions",
+          "springing back into shape; elastic"
+        ]
+      }
+    ];
+
+    function pickRandom() {
+      return entries[Math.floor(Math.random() * entries.length)];
+    }
+
+    function renderEntry(entry) {
+      const wordEl = document.getElementById("word-text");
+      const phoneticEl = document.getElementById("phonetic-text");
+      const posEl = document.getElementById("pos-text");
+      const defsEl = document.getElementById("definitions");
+
+      wordEl.textContent = entry.word;
+      phoneticEl.textContent = entry.phonetic;
+      posEl.textContent = entry.pos;
+
+      defsEl.innerHTML = "";
+      entry.defs.forEach((d) => {
+        const li = document.createElement("li");
+        li.textContent = d;
+        defsEl.appendChild(li);
+      });
+    }
+
+    document.getElementById("refresh").addEventListener("click", () => {
+      renderEntry(pickRandom());
+    });
+
+    const arrow = document.querySelector(".floating-arrow");
+    if (arrow) {
+      arrow.addEventListener("click", () => {
+        const target = window.scrollY + window.innerHeight * 1.2;
+        window.scrollTo({ top: target, behavior: "smooth" });
+        arrow.style.display = "none";
+      });
+    }
+
+    // Initial render
+    renderEntry(pickRandom());
+  </script>
+</body>
+</html>

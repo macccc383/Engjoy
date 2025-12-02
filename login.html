@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejoy English | Log in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb;
+      --border: #e2e8f0;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 32px 16px;
+    }
+
+    .mobile-blocker {
+      display: none;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: #ffffff;
+      color: #0f172a;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mobile-blocker img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .desktop-only {
+      display: block;
+      width: 100%;
+    }
+
+    @media (max-width: 800px) {
+      .desktop-only {
+        display: none !important;
+      }
+      .mobile-blocker {
+        display: flex;
+      }
+    }
+
+    .login-wrap {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin: 0 auto;
+      order: 1;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .logo-mark {
+      width: 200px;
+      height: 120px;
+      border-radius: 16px;
+      display: block;
+      object-fit: cover;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    h1 {
+      margin: 8px 0 4px;
+      font-size: 24px;
+      letter-spacing: -0.2px;
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+      background: #ffffff;
+      color: var(--text);
+      margin-bottom: 14px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .footer-links {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .login-illustration {
+      max-width: 380px;
+      width: 55vw;
+      height: auto;
+      display: block;
+      margin-top: 0;
+      margin-left: -460px;
+      align-self: center;
+      order: 2;
+    }
+
+    @media (max-width: 640px) {
+      .login-wrap {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .login-illustration {
+        max-width: 220px;
+        width: 70vw;
+        margin-top: 24px;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-blocker">
+    <div>
+      <div style="font-size:28px; font-weight:900; margin-bottom:8px;">WE'RE SORRY</div>
+      <div style="font-size:24px; font-weight:800; margin-bottom:12px;">Please access the website through desktop</div>
+      <img src="DOPIEsad.png" alt="DOPIE sad">
+    </div>
+  </div>
+  <div class="desktop-only">
+    <div class="login-wrap">
+      <div class="card">
+        <div class="logo">
+          <img class="logo-mark" src="logo.png" alt="Ejoy English logo">
+        </div>
+        <h1>Welcome back</h1>
+        <p>Log in to access your IELTS labs and study plan.</p>
+        <form id="login-form">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter your username" autocomplete="username" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+
+          <button class="btn" type="submit">Log in</button>
+        </form>
+        <div class="footer-links">
+          <a href="index.html">Back to home</a>
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+      <img class="login-illustration" src="DOPIEwatching.png" alt="DOPIE watching">
+    </div>
+  </div>
+
+  <script>
+    // Simple front-end redirect; accepts any credentials for now.
+    document.getElementById("login-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>
