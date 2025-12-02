@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ejoy English | High-Impact Training</title>
+  <title>BAO | High-Impact Training</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -50,28 +50,19 @@
       z-index: 20;
       background: transparent;
       border-bottom: none;
-      padding: 8px 0;
+      padding: 20px 0;
     }
 
     header .container {
-      padding: 0 4px;
+      padding: 0 0 0 0;
     }
 
     nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       padding: 0;
       gap: 12px;
-    }
-
-    .nav-islands {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      justify-content: flex-start;
-      flex: 1;
     }
 
     .nav-actions {
@@ -105,13 +96,14 @@
     }
 
     .logo-mark {
-      width: 200px;
-      height: 120px;
-      border-radius: 16px;
+      width: 320px;
+      height: 180px;
+      border-radius: 12px;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       background: transparent;
       box-shadow: none;
+      padding: 0;
     }
 
     .logo-island {
@@ -125,6 +117,12 @@
       background: var(--accent);
       color: #ffffff;
       border: 1px solid var(--accent);
+    }
+
+    .logo-top {
+      display: flex;
+      align-items: center;
+      padding: 8px 0 12px;
     }
 
     .btn {
@@ -204,7 +202,7 @@
 
     .hero {
       position: relative;
-      padding: 72px 0 56px;
+      padding: 96px 0 64px;
     }
 
     .hero-illustration {
@@ -229,7 +227,7 @@
       grid-area: image;
       display: flex;
       justify-content: flex-start;
-      margin-left: -390px;
+      margin-left: -380px;
     }
 
     .hero-grid .hero-content-col {
@@ -342,7 +340,7 @@
     }
 
     .section {
-      padding: 36px 0;
+      padding: 56px 0;
     }
 
     .section-header {
@@ -493,7 +491,7 @@
       box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
       grid-column: 1 / -1;
       max-width: 760px;
-      margin: 20px auto 0;
+      margin: 0 auto 0;
       min-height: 320px;
     }
 
@@ -627,11 +625,6 @@
   <header>
     <div class="container">
       <nav>
-        <div class="nav-islands">
-          <a class="island logo-island" href="index.html">
-            <img class="logo-mark" src="logo.png" alt="Ejoy English logo">
-          </a>
-        </div>
         <div class="nav-actions">
           <a class="island" href="#programs">Programs</a>
           <a class="island" href="#focus">Modules</a>
@@ -644,6 +637,11 @@
   </header>
 
   <main>
+    <div style="position:absolute; top:0; left:6px; z-index:25;">
+      <div class="logo-top" style="padding:0;">
+        <img class="logo-mark" src="logo.png" alt="BAO logo">
+      </div>
+    </div>
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-image-col">
@@ -655,7 +653,7 @@
             <span style="color:var(--accent);">Band 7+ focus</span>
           </div>
           <h1>High-impact IELTS training with AI feedback that sticks.</h1>
-          <p>Ejoy English blends AI tutors, targeted practice, and weekly speaking labs so you learn exactly what examiners want. No guesswork, just structured progress you can measure.</p>
+          <p>BAO blends AI tutors, targeted practice, and weekly speaking labs so you learn exactly what examiners want. No guesswork, just structured progress you can measure.</p>
           <div class="cta-row">
             <button class="btn btn-primary" style="background:#facc15; color:#000; border:1px solid #eab308;">Start your free consult</button>
             <button class="btn btn-ghost">Download syllabus</button>
@@ -715,7 +713,7 @@
           <div class="section-header">
             <div>
               <div class="eyebrow">Compare</div>
-              <h2>Why choose Ejoy English over other alternatives?</h2>
+              <h2>Why choose BAO over other alternatives?</h2>
             </div>
           <p>Focused IELTS prep with AI feedback versus general English practice.</p>
           </div>
@@ -723,7 +721,7 @@
             <thead>
               <tr>
                 <th>Feature</th>
-                <th><span class="compare-head"><img src="DOPIEtrustus.png" alt="Ejoy English"><span>Ejoy English</span></span></th>
+                <th><span class="compare-head"><img src="DOPIEtrustus.png" alt="BAO"><span>BAO</span></span></th>
                 <th><span class="compare-head"><img src="duo.png" alt="Other alternatives"><span>Other alternatives</span></span></th>
               </tr>
             </thead>
@@ -863,7 +861,7 @@
       <div class="footer-grid">
         <div>
           <div class="logo" style="margin-bottom:8px;">
-            <img class="logo-mark" src="logo.png" alt="Ejoy English logo">
+            <img class="logo-mark" src="logo.png" alt="BAO logo">
           </div>
           <p>Practical IELTS training with AI feedback, live labs, and structured study plans.</p>
         </div>
@@ -884,7 +882,7 @@
           </div>
         </div>
       </div>
-      <p style="margin-top:20px;">© 2025 Ejoy English. All rights reserved.</p>
+      <p style="margin-top:20px;">© 2025 BAO. All rights reserved.</p>
     </div>
   </footer>
   </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ejoy English | Log in</title>
+  <title>BAO | Log in</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -97,13 +97,21 @@
     }
 
     .logo-mark {
-      width: 200px;
-      height: 120px;
-      border-radius: 16px;
+      width: 320px;
+      height: 180px;
+      border-radius: 12px;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       background: transparent;
       box-shadow: none;
+      padding: 0;
+    }
+
+    .logo-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 0 12px;
     }
 
     h1 {
@@ -217,10 +225,10 @@
   <div class="desktop-only">
     <div class="login-wrap">
       <div class="card">
-        <div class="logo">
-          <img class="logo-mark" src="logo.png" alt="Ejoy English logo">
-        </div>
         <h1>Welcome back</h1>
+        <div style="display:flex; justify-content:center; margin:12px 0;">
+          <img class="logo-mark" src="logo.png" alt="BAO logo" style="max-width:180px; height:auto;">
+        </div>
         <p>Log in to access your IELTS labs and study plan.</p>
         <form id="login-form">
           <label for="username">Username</label>

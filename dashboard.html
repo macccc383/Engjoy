@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ejoy English | Word of the Day</title>
+  <title>BAO | Word of the Day</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -56,18 +56,9 @@
     nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       padding: 0;
       gap: 12px;
-    }
-
-    .nav-islands {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      justify-content: flex-start;
-      flex: 1;
     }
 
     .nav-actions {
@@ -101,13 +92,14 @@
     }
 
     .logo-mark {
-      width: 200px;
-      height: 120px;
-      border-radius: 16px;
+      width: 320px;
+      height: 180px;
+      border-radius: 12px;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       background: transparent;
       box-shadow: none;
+      padding: 0;
     }
 
     .logo-island {
@@ -121,6 +113,12 @@
       background: var(--accent);
       color: #ffffff;
       border: 1px solid var(--accent);
+    }
+
+    .logo-top {
+      display: flex;
+      align-items: center;
+      padding: 8px 0 12px;
     }
 
     .card {
@@ -398,11 +396,6 @@
     <header>
       <div class="container">
         <nav>
-          <div class="nav-islands">
-            <a class="island logo-island" href="index.html">
-              <img class="logo-mark" src="logo.png" alt="Ejoy English logo">
-            </a>
-          </div>
           <div class="nav-actions">
             <a class="island" href="index.html#programs">Programs</a>
             <a class="island" href="index.html#focus">Modules</a>
@@ -414,6 +407,11 @@
     </header>
 
     <main style="padding-top: 48px;">
+      <div class="container">
+        <div class="logo-top">
+          <img class="logo-mark" src="logo.png" alt="BAO logo">
+        </div>
+      </div>
       <div class="container">
         <div class="card" id="word-card">
           <div class="top-row">
