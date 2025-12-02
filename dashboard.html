@@ -518,11 +518,28 @@
     });
 
     const arrow = document.querySelector(".floating-arrow");
+    const htmlEl = document.documentElement;
+    const bodyEl = document.body;
+
+    const lockScroll = () => {
+      htmlEl.style.overflow = "hidden";
+      bodyEl.style.overflow = "hidden";
+    };
+
+    const unlockScroll = () => {
+      htmlEl.style.overflow = "auto";
+      bodyEl.style.overflow = "auto";
+    };
+
+    // Lock scroll until arrow is clicked
+    lockScroll();
+
     if (arrow) {
       arrow.addEventListener("click", () => {
         const target = window.scrollY + window.innerHeight * 1.2;
         window.scrollTo({ top: target, behavior: "smooth" });
         arrow.style.display = "none";
+        unlockScroll();
       });
     }
 

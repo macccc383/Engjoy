@@ -525,6 +525,59 @@
       border: 1px solid var(--border);
     }
 
+    .compare-section {
+      padding: 60px 0;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 16px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .compare-table th {
+      background: #f1f5f9;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-logo {
+      max-height: 42px;
+      height: auto;
+      width: auto;
+      display: block;
+    }
+
+    .compare-head {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .compare-head img {
+      height: 104px;
+      width: auto;
+      display: inline-block;
+    }
+
     @media (max-width: 720px) {
       nav {
         flex-wrap: wrap;
@@ -601,8 +654,8 @@
             <span>IELTS made clear</span>
             <span style="color:var(--accent);">Band 7+ focus</span>
           </div>
-          <h1>High-impact IELTS training with human feedback that sticks.</h1>
-          <p>Ejoy English blends expert instructors, targeted practice, and weekly speaking labs so you learn exactly what examiners want. No guesswork, just structured progress you can measure.</p>
+          <h1>High-impact IELTS training with AI feedback that sticks.</h1>
+          <p>Ejoy English blends AI tutors, targeted practice, and weekly speaking labs so you learn exactly what examiners want. No guesswork, just structured progress you can measure.</p>
           <div class="cta-row">
             <button class="btn btn-primary" style="background:#facc15; color:#000; border:1px solid #eab308;">Start your free consult</button>
             <button class="btn btn-ghost">Download syllabus</button>
@@ -654,152 +707,60 @@
       </div>
     </section>
 
-    <section id="programs" class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="eyebrow">Programs</div>
-            <h2>Choose a pace that fits your test date.</h2>
-          </div>
-          <p>Every track includes weekly labs, graded writing, and band-level rubrics so you always know how close you are to your target score.</p>
-        </div>
-        <div class="grid">
-          <div class="card">
-            <div class="pill">4-week booster</div>
-            <h3>Fast Track</h3>
-            <p>Designed for retakers or last-mile prep with intensive speaking and writing clinics.</p>
-            <ul class="list">
-              <li>3 live labs / week</li>
-              <li>2 graded essays with examiner notes</li>
-              <li>Daily 20-minute micro-drills</li>
-            </ul>
-            <div class="program-meta">
-              <span>Target: Band 6.5+</span>
-              <span>Starts: Monday</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="pill">8-week signature</div>
-            <h3>Complete Mastery</h3>
-            <p>Holistic pathway covering all four modules with structured feedback and checkpoints.</p>
-            <ul class="list">
-              <li>Weekly 1:1 coaching</li>
-              <li>6 graded essays + model answers</li>
-              <li>Speaking mock tests with band scores</li>
-            </ul>
-            <div class="program-meta">
-              <span>Target: Band 7+</span>
-              <span>Starts: Jan 6</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="pill">Labs only</div>
-            <h3>Speaking + Writing Labs</h3>
-            <p>Stay sharp with weekly examiner-led labs, ideal between attempts or after work.</p>
-            <ul class="list">
-              <li>Unlimited lab attendance</li>
-              <li>Bi-weekly essay grading</li>
-              <li>Instant vocabulary feedback</li>
-            </ul>
-            <div class="program-meta">
-              <span>Evenings + weekends</span>
-              <span>Join anytime</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="focus" class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="eyebrow">Modules</div>
-            <h2>Exact skills IELTS examiners reward.</h2>
-          </div>
-          <p>We train the micro-skills that move band scores: clarity, cohesion, lexical range, timing, and task response.</p>
-        </div>
-        <div class="grid">
-          <div class="card">
-            <div class="tag">Speaking</div>
-            <h3>Fluent, natural answers</h3>
-            <p>Drill part 2 and 3 with examiner follow-ups so you know how to extend and justify answers.</p>
-            <div class="badges">
-              <div class="badge">Cue-card frameworks</div>
-              <div class="badge">Filler control</div>
-              <div class="badge">Pronunciation loops</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="tag">Writing</div>
-            <h3>Task-ready essays</h3>
-            <p>Blueprints for Task 1 visuals and Task 2 arguments, with model paragraphs you can adapt.</p>
-            <div class="badges">
-              <div class="badge">Band 7 structures</div>
-              <div class="badge">Thesis clarity</div>
-              <div class="badge">Cohesion devices</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="tag">Listening</div>
-            <h3>Trap-proofing</h3>
-            <p>Predict answers, track synonyms, and avoid distractors with timed section-by-section drills.</p>
-            <div class="badges">
-              <div class="badge">Annotation system</div>
-              <div class="badge">Accent variety</div>
-              <div class="badge">Speed drills</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="tag">Reading</div>
-            <h3>Confident scanning</h3>
-            <p>Headnote mapping and question-type strategies to cut down search time and avoid traps.</p>
-            <div class="badges">
-              <div class="badge">True/False/Not Given</div>
-              <div class="badge">Matching views</div>
-              <div class="badge">Timing plans</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="eyebrow">Method</div>
-            <h2>Coaching built to show progress every week.</h2>
-          </div>
-          <p>Short cycles of practice, feedback, and adjustment so you keep moving toward your target score.</p>
-        </div>
-        <div class="timeline">
-          <div class="step">
-            <strong>1. Pinpoint</strong>
-            <span style="color:var(--muted);">Free level check + band gap report in 24 hours.</span>
-          </div>
-          <div class="step">
-            <strong>2. Plan</strong>
-            <span style="color:var(--muted);">Custom weekly plan with tasks for all four modules.</span>
-          </div>
-          <div class="step">
-            <strong>3. Practice</strong>
-            <span style="color:var(--muted);">Timed drills, speaking labs, and model answers.</span>
-          </div>
-          <div class="step">
-            <strong>4. Feedback</strong>
-            <span style="color:var(--muted);">Examiner-style notes, band ranges, and rewrite targets.</span>
-          </div>
-          <div class="step">
-            <strong>5. Prove</strong>
-            <span style="color:var(--muted);">Mock tests with band scores and final readiness check.</span>
-          </div>
-        </div>
-      </div>
-    </section>
+ 
 
     <section id="wins" class="section">
       <div class="container">
+        <div class="compare-section" style="padding-top:0;">
+          <div class="section-header">
+            <div>
+              <div class="eyebrow">Compare</div>
+              <h2>Why choose Ejoy English over other alternatives?</h2>
+            </div>
+          <p>Focused IELTS prep with AI feedback versus general English practice.</p>
+          </div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th><span class="compare-head"><img src="DOPIEtrustus.png" alt="Ejoy English"><span>Ejoy English</span></span></th>
+                <th><span class="compare-head"><img src="duo.png" alt="Other alternatives"><span>Other alternatives</span></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Primary Purpose</strong></td>
+                <td>IELTS-focused training</td>
+                <td>General English learning</td>
+              </tr>
+              <tr>
+                <td><strong>Feedback Type</strong></td>
+                <td>AI feedback with examiner-style notes</td>
+                <td>Automated corrections</td>
+              </tr>
+              <tr>
+                <td><strong>Speaking &amp; Writing Prep</strong></td>
+                <td>Live labs, mock tests, graded essays</td>
+                <td>Limited, no exam-style tasks</td>
+              </tr>
+              <tr>
+                <td><strong>Progress Tracking</strong></td>
+                <td>Band scores, weekly reports, structured roadmap</td>
+                <td>Streaks, XP, general levels</td>
+              </tr>
+              <tr>
+                <td><strong>Skill Development</strong></td>
+                <td>IELTS-specific strategies (trap-proofing, task response, scanning)</td>
+                <td>Vocabulary + basic grammar</td>
+              </tr>
+              <tr>
+                <td><strong>Outcome</strong></td>
+                <td>+1.5 band improvement on average</td>
+                <td>Improves general proficiency, not IELTS scores</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="section-header">
           <div>
             <div class="eyebrow">Wins</div>
@@ -860,7 +821,7 @@
           <div class="card">
             <div class="tag">Signature</div>
             <div class="price">200.000 VND</div>
-            <p>Our most popular track with weekly coaching and mocks.</p>
+            <p>Our most popular track with weekly AI coaching and mocks.</p>
             <ul class="list">
               <li>8 weeks guided</li>
               <li>Weekly live labs</li>
@@ -877,7 +838,7 @@
               <li>Unlimited labs</li>
               <li>Full mock suite</li>
             </ul>
-            <button class="btn btn-primary" style="margin-top:12px;">Talk to a coach</button>
+            <button class="btn btn-primary" style="margin-top:12px;">Talk to an AI coach</button>
           </div>
         </div>
       </div>
@@ -904,7 +865,7 @@
           <div class="logo" style="margin-bottom:8px;">
             <img class="logo-mark" src="logo.png" alt="Ejoy English logo">
           </div>
-          <p>Practical IELTS training with human feedback, live labs, and structured study plans.</p>
+          <p>Practical IELTS training with AI feedback, live labs, and structured study plans.</p>
         </div>
         <div>
           <strong style="color:var(--text);">Visit</strong>
